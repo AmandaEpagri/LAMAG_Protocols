@@ -69,21 +69,21 @@
             
             <!-- LOGO DO LABORATÓRIO (AUTO-FIX) -->
             <!-- Tenta carregar logo.png, se falhar tenta logo.jpg, se falhar esconde a imagem e mostra o texto -->
-            <div class="w-full flex justify-center mb-2 relative group">
+            <div class="w-full flex justify-center mb-4 relative group">
                 <img src="logo.png" 
                      onerror="this.onerror=null; this.src='logo.jpg'; document.getElementById('backup-title').classList.remove('hidden');"
                      alt="LAMAG Logo" 
                      class="max-h-28 w-auto object-contain rounded-sm transition-opacity duration-300">
             </div>
 
-            <!-- Título de Texto (Aparece apenas se a imagem falhar) -->
+            <!-- Título de Texto (Aparece se a imagem falhar) -->
             <div id="backup-title" class="hidden text-center animate-fade-in">
                 <h1 class="text-2xl font-bold text-stone-800 flex items-center justify-center gap-2">
                     <span class="text-amber-600">&#9763;</span> LAMAG
                 </h1>
             </div>
             
-            <!-- Texto "Protocolos Oficiais" foi removido daqui conforme solicitado -->
+            <p class="text-[10px] text-stone-500 mt-2 text-center uppercase tracking-wider font-semibold">Protocolos Oficiais</p>
         </div>
         
         <nav class="flex-1 overflow-y-auto py-4 space-y-1">
@@ -733,7 +733,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             initDashboardCharts();
             renderMediaCards('all');
-            // initKineticsChart('P'); // Removed per request
             updatePetriViz(); 
         });
 
